@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Rehmat Digital Seva Kendra — Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="Rehmat Digital Seva Kendra — Chehlan. PAN, Aadhaar, certificates & printing.">
+</head>
+<body class="page-enter" id="body">
+
+  <header class="header">
+    <div class="header-brand">
+      <div class="header-logo">
+    <img src="fateh-logo.png" alt="Fateh Digital Logo" class="site-logo">
+      <div>
+        <div class="site-title">Rehmat Digital Seva Kendra</div>
+        <div class="header-sub">Official Services · Chehlan Near Baba Balmik Mandir</div>
+      </div>
+    </div>
+
+    <div style="margin-left:auto" id="langWrap">
+      <button class="lang-btn" id="langBtn">EN / हिंदी</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- navigation circles (5 including language) -->
+    <div class="grid-nav" id="navGrid">
+      <a class="nav-circle" href="index.html"><span class="nav-icon">🏠</span><span>Home</span></a>
+      <a class="nav-circle" href="services.html"><span class="nav-icon">🧾</span><span>Services</span></a>
+      <a class="nav-circle" href="contact.html"><span class="nav-icon">📞</span><span>Contact</span></a>
+      <a class="nav-circle" href="about.html"><span class="nav-icon">ℹ️</span><span>About</span></a>
+      <a class="nav-circle" id="langJump" href="#"><span class="nav-icon">🌐</span><span>Language</span></a>
+    </div>
+
+    <!-- Latest Bharti (sticky) -->
+    <div class="notice-wrap">
+      <div class="notice" id="latestNotice">
+        <div>
+          <div class="title">🔔 SSC GD Constable Recruitment 2026 — Notification out for 25,487 Posts</div>
+          <div class="small">Click to apply — limited seats, contact now.</div>
+        </div>
+        <a class="cta" id="noticeCTA" href="#">Apply</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1 id="heroTitle">Rehmat Digital Seva Kendra</h1>
+      <p id="heroSub">Chehlan Near Baba Balmik Mandir — Government services partner</p>
+      <div class="row" style="margin-top:8px">
+        <a class="nav-circle" href="services.html" style="flex:0 0 auto; border-radius:10px; padding:10px 14px">See Services</a>
+        <a class="nav-circle" href="contact.html" style="flex:0 0 auto; background:#fff;color:var(--deep-1);border:1px solid rgba(11,23,34,0.06)">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- Featured services -->
+    <section class="small-card" style="margin-top:16px">
+      <h3 style="margin:0 0 8px 0">Featured Services</h3>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-title">PAN Card</div>
+          <div class="service-desc">Apply & corrections</div>
+          <div class="service-price"><span class="price-badge">₹250</span></div>
+        </div>
+        <div class="service-card">
+          <div class="service-title">Aadhaar Print</div>
+          <div class="service-desc">Printing & minor updates</div>
+          <div class="service-price"><span class="price-badge">₹50</span></div>
+        </div>
+        <div class="service-card">
+          <div class="service-title">Resume / CV</div>
+          <div class="service-desc">Professional resume writing</div>
+          <div class="service-price"><span class="price-badge">₹50</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- bottom bar: socials + location -->
+    <div class="bottom-bar">
+      <div class="socials">
+        <a href="https://www.instagram.com/mr_mrs_ghali?igsh=ZGFxNGt0aXdwaDU2" target="_blank" rel="noopener">📸 Follow on Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=100070660671297&mibextid=JRoKGi" target="_blank" rel="noopener">👍 Follow on Facebook</a>
+      </div>
+
+      <div class="location-row">
+        <div class="small">Address: Village Chehlan, Samrala, Punjab 141124, India</div>
+        <div>
+          <a class="btn-loc" id="mapsBtn" href="#" target="_blank">🗺️ Open Location</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-note">© 2025 Rehmat Digital Seva Kendra — Chehlan Near Baba Balmik Mandir</div>
+  </main>
+
+  <a class="fab" id="whatsFab" href="#" target="_blank">💬 WhatsApp</a>
+
+<script>
+/* Page ready animation */
+window.addEventListener('DOMContentLoaded', ()=>{
+  document.getElementById('body').classList.add('page-ready');
+});
+
+/* WhatsApp for latest bharti: prefilled message */
+const phone = '919563001616'; // change if needed
+const bhartiText = encodeURIComponent('I want to apply - SSC GD Constable Recruitment 2026');
+const applyUrl = `https://wa.me/${phone}?text=${bhartiText}`;
+document.getElementById('noticeCTA').href = applyUrl;
+document.getElementById('whatsFab').href = `https://wa.me/${phone}?text=${encodeURIComponent('Hi, I have a query about services')}`;
+
+/* maps url for Ghal Kalan */
+const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=Ghal+Kalan+Punjab+142048+India';
+document.getElementById('mapsBtn').href = mapsUrl;
+
+/* language toggle simple (switch main texts) */
+const langBtn = document.getElementById('langBtn');
+let lang='en';
+const texts = {
+  en:{
+    heroTitle:'Rehmat Digital Seva Kendra',
+    heroSub:'Chehlan Near Baba Balmik Mandir— Government services partner',
+    notice:'🔔 SSC GD Constable Recruitment 2026 — Notification out for 25,487 Posts',
+    applyBtn:'Apply'
+  },
+  hi:{
+    heroTitle:'रहमत डिजिटल सेवा केंद्र',
+    heroSub: 'चेहला करीब बाबा बाल्मिकी मंदिर— सरकारी सेवा भागीदार',
+    notice:'🔔 एसएससी जीडी कांस्टेबल भर्ती 2026 — 25,487 पदों की सूचना जारी',
+    applyBtn:'आवेदन करें'
+  }
+};
+function setLang(l){
+  lang=l;
+  document.getElementById('heroTitle').textContent = texts[l].heroTitle;
+  document.getElementById('heroSub').textContent = texts[l].heroSub;
+  document.getElementById('latestNotice').querySelector('.title').textContent = texts[l].notice;
+  document.getElementById('noticeCTA').textContent = texts[l].applyBtn;
+}
+langBtn.addEventListener('click', ()=> setLang(lang==='en'?'hi':'en'));
+document.getElementById('langJump').addEventListener('click', (e)=>{ e.preventDefault(); setLang(lang==='en'?'hi':'en'); });
+
+</script>
+</body>
+        </html>
