@@ -132,15 +132,47 @@ body{
   font-size: 14px;
   font-weight: 600;
 }
-/* FORCE Apply button style (final override) */
-.notice-box a.apply-btn {
-  display: inline-block !important;
-  margin-top: 10px !important;
-  padding: 8px 18px !important;
-  background: linear-gradient(180deg, #1e88e5, #0b5ed7) !important;
-  color: #ffffff !important;
-  text-decoration: none !important;
-  border-radius: 22px !important;
-  font-size: 14px !important;
-  font-weight: 600 !important;
+.job-page h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 28px 0 12px;
+}
+
+.job-page h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 18px 0 14px;
+}
+
+.job-text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 12px 0 30px;
+}
+
+.big-space {
+  height: 60px;
+}
+
+.job-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.job-table td {
+  border: 2px solid #333;
+  padding: 14px;
+  font-size: 15px;
+  vertical-align: top;
+}
+
+.job-table td:first-child {
+  font-weight: 700;
+  width: 45%;
+}
+
+.green-text {
+  color: #0a9d5a;
+  font-weight: 700;
 }
