@@ -132,3 +132,15 @@ body{
   font-size: 14px;
   font-weight: 600;
 }
+/* FORCE Apply button style (final override) */
+.notice-box a.apply-btn {
+  display: inline-block !important;
+  margin-top: 10px !important;
+  padding: 8px 18px !important;
+  background: linear-gradient(180deg, #1e88e5, #0b5ed7) !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  border-radius: 22px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
