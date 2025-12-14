@@ -176,3 +176,53 @@ body{
   color: #0a9d5a;
   font-weight: 700;
 }
+/* ===== HEADER FIX ===== */
+.site-header {
+  background: #f7fafc;
+  padding: 16px;
+}
+
+.header-wrap {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.site-logo {
+  width: 64px;
+  height: auto;
+  border-radius: 10px;
+  background: #fff;
+  padding: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.business-name {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.business-sub {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* mobile fix */
+@media (max-width: 600px) {
+  .header-wrap {
+    align-items: flex-start;
+  }
+
+  .business-name {
+    font-size: 22px;
+  }
+}
