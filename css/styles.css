@@ -121,3 +121,14 @@ body{
   }
   
 }
+.apply-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 18px;
+  background: linear-gradient(180deg, #1e88e5, #0b5ed7);
+  color: #ffffff !important;
+  text-decoration: none !important;
+  border-radius: 22px;
+  font-size: 14px;
+  font-weight: 600;
+}
