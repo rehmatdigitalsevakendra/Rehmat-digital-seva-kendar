@@ -45,7 +45,7 @@ body{
 /* circular nav button */
 .nav-circle{
   background:linear-gradient(180deg,var(--deep-2),var(--deep-1));
-  color:white;border-radius:999px;padding:12px 12px;display:flex;align-items:center;gap:10px;justify-content:center;
+  color:white;border-radius:999px;padding:12px 12px;display:flex;align-items:center;gap:8px;justify-content:center;
   font-weight:700;font-size:16px;cursor:pointer;box-shadow:0 18px 40px rgba(11,23,34,0.08);
   transition:transform .14s ease, box-shadow .14s ease;
   text-decoration:none;color:white;
