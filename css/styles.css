@@ -54,7 +54,7 @@ body{
 .nav-icon{font-size:18px;opacity:0.98}
 
 /* notice / latest bharti (fixed top of content) */
-.notice-wrap{position:sticky;top:76px;z-index:70;margin-bottom:14px}
+.notice-wrap{position:static;z-index:auto;}
 .notice{
   display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-radius:12px;background:linear-gradient(90deg,#fff, #f1fbff);
   border-left:6px solid var(--accent);box-shadow:var(--soft-shadow);
