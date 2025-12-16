@@ -105,17 +105,17 @@
     <section class="small-card" style="margin-top:16px">
       <h3 style="margin:0 0 8px 0">Featured Services</h3>
       <div class="services-grid">
-        <div class="service-card">
+        <div class="service-card" onclick="openServicePopup('PAN Card')">
           <div class="service-title">🪪 PAN Card</div>
           <div class="service-desc">Apply & corrections</div>
           <div class="service-price"><span class="price-badge">₹250</span></div>
         </div>
-        <div class="service-card">
+        <div class="service-card" onclick="openServicePopup('Aadhaar Print')">
           <div class="service-title">🆔 Aadhaar Print</div>
           <div class="service-desc">Printing & minor updates</div>
           <div class="service-price"><span class="price-badge">₹50</span></div>
         </div>
-        <div class="service-card">
+        <div class="service-card" onclick="openServicePopup('Resume / CV')">
           <div class="service-title">📄 Resume / CV</div>
           <div class="service-desc">Professional resume writing</div>
           <div class="service-price"><span class="price-badge">₹50</span></div>
@@ -148,6 +148,24 @@
     <div class="footer-note">© 2025 Rehmat Digital Seva Kendra — Chehlan Near Baba Balmik Mandir</div>
   </main>
 
+  <!-- Service Contact Popup -->
+<div id="servicePopup" class="service-popup" onclick="closeServicePopup()">
+  <div class="popup-box" onclick="event.stopPropagation()">
+    <h3 id="popupTitle">Service</h3>
+
+    <a id="popupCall" class="popup-btn call">
+      📞 Call Now
+    </a>
+
+    <a id="popupWhatsapp" class="popup-btn whatsapp" target="_blank">
+      💬 WhatsApp
+    </a>
+
+    <button class="popup-btn cancel" onclick="closeServicePopup()">
+      ❌ Cancel
+    </button>
+  </div>
+</div>
   <a class="fab" id="whatsFab" href="#" target="_blank">💬 WhatsApp</a>
 
 <script>
@@ -158,6 +176,27 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
 /* WhatsApp for latest bharti: prefilled message */
 const phone = '919563001616'; // change if needed
+  // ===== Service popup (Call / WhatsApp) =====
+const servicePhone = "919563001616"; // same number
+
+function openServicePopup(serviceName) {
+  document.getElementById("popupTitle").innerText = serviceName;
+
+  document.getElementById("popupCall").href =
+    "tel:+" + servicePhone;
+
+  document.getElementById("popupWhatsapp").href =
+    "https://wa.me/" + servicePhone +
+    "?text=" + encodeURIComponent(
+      "Hello Rehmat Digital Seva Kendra, I want " + serviceName
+    );
+
+  document.getElementById("servicePopup").style.display = "flex";
+}
+
+function closeServicePopup() {
+  document.getElementById("servicePopup").style.display = "none";
+}
 const bhartiText = encodeURIComponent('I want to apply - SSC GD Constable Recruitment 2026');
 const applyUrl = `https://wa.me/${phone}?text=${bhartiText}`;
 document.getElementById('whatsFab').href = `https://wa.me/${phone}?text=${encodeURIComponent('Hi, I have a query about services')}`;
