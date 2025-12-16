@@ -353,3 +353,53 @@ body{
 .whatsapp-btn {
   background-color: #25D366 !important;
 }
+/* ===== Featured Services Cards ===== */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* Service title (with emoji icon) */
+.service-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+/* Service description */
+.service-desc {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Price section */
+.service-price {
+  margin-top: 8px;
+}
+
+/* Price badge */
+.price-badge {
+  display: inline-block;
+  background: #e7f0ff;
+  color: #0a58ca;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
