@@ -323,3 +323,33 @@ body{
 .whatsapp-btn:hover {
   background: #1ebe5d;
 }
+/* Force style for Call & WhatsApp buttons */
+.contact-cta {
+  display: flex !important;
+  gap: 14px;
+  justify-content: center;
+  margin: 22px 0;
+}
+
+.contact-cta a {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 22px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none !important;
+  color: #fff !important;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+}
+
+/* Call */
+.call-btn {
+  background-color: #007bff !important;
+}
+
+/* WhatsApp */
+.whatsapp-btn {
+  background-color: #25D366 !important;
+}
