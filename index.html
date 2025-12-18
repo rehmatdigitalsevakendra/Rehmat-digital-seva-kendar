@@ -16,6 +16,7 @@
       <div>
         <div class="site-title">Rehmat Digital Seva Kendra</div>
         <div class="header-sub">Official Services · Chehlan</div>
+        <button class="voice-btn" onclick="speakWelcome()">🔊</button>
       </div>
     </div>
 
@@ -231,17 +232,14 @@ function setLang(l){
 }
 langBtn.addEventListener('click', ()=> setLang(lang==='en'?'hi':'en'));
 document.getElementById('langJump').addEventListener('click', (e)=>{ e.preventDefault(); setLang(lang==='en'?'hi':'en'); });
-// 🔊 Welcome voice (runs once on page load)
-  window.addEventListener("load", function () {
-    const speech = new SpeechSynthesisUtterance(
-      "Welcome to Rehmat Digital Seva Kendra"
-    );
-    speech.lang = "en-IN";
-    speech.rate = 0.9;
-    speech.pitch = 1;
-
-    window.speechSynthesis.speak(speech);
-  });
+function speakWelcome() {
+  const speech = new SpeechSynthesisUtterance(
+    "Welcome to Rehmat Digital Seva Kendra"
+  );
+  speech.lang = "en-IN";
+  speech.rate = 0.9;
+  window.speechSynthesis.speak(speech);
+}
 </script>
 </body>
         </html>
