@@ -502,12 +502,15 @@ body{
   cursor: pointer;
 }
 .voice-btn{
+  margin-top:6px;
   background:#0a58ca;
   color:#fff;
   border:none;
-  border-radius:50%;
-  width:36px;
-  height:36px;
-  font-size:18px;
-  margin-top:6px;
+  border-radius:20px;
+  padding:6px 12px;
+  font-size:14px;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  cursor:pointer;
 }
