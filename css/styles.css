@@ -514,3 +514,7 @@ body{
   gap:6px;
   cursor:pointer;
 }
+
+.voice-text{
+  font-weight:500;
+}
