@@ -521,10 +521,10 @@ body{
 /* ===== Owner Box Top Right ===== */
 .owner-box {
   position: absolute;
-  top: 25px;
-  right: 15px;
-  width: 120px;
-  height: 48px;
+  top: 22px;
+  right: 12px;
+  width: 115px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
