@@ -518,37 +518,26 @@ body{
 .voice-text{
   font-weight:500;
 }
-.owner-box {
-  margin: 15px auto;
-  max-width: 320px;
-  text-align: center;
-}
-
-.owner-box a {
-  text-decoration: none;
-}
-
-.owner-box-content {
-  background: #000;
+/* ===== Owner Details Button ===== */
+.owner-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #0a5ed7, #0d79ff);
   color: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-  transition: transform 0.2s ease, background 0.2s ease;
+  padding: 10px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 10px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.25);
 }
 
-.owner-box-content h3 {
-  margin: 0;
+.owner-btn:hover {
+  background: linear-gradient(135deg, #084fb6, #0a6ce0);
+}
+
+.owner-icon {
   font-size: 18px;
-}
-
-.owner-box-content p {
-  margin: 6px 0 0;
-  font-size: 14px;
-  opacity: 0.85;
-}
-
-.owner-box-content:hover {
-  background: #111;
-  transform: scale(1.03);
 }
