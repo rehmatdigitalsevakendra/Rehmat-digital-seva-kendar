@@ -518,26 +518,22 @@ body{
 .voice-text{
   font-weight:500;
 }
-/* ===== Owner Details Button ===== */
-.owner-btn {
-  display: inline-flex;
+/* ===== Owner Box Top Right ===== */
+.owner-box {
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  width: 120px;
+  height: 48px;
+  display: flex;
   align-items: center;
-  gap: 10px;
-  background: linear-gradient(135deg, #0a5ed7, #0d79ff);
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-size: 15px;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 30px;
   font-weight: 600;
-  margin-top: 10px;
-  box-shadow: 0 5px 12px rgba(0,0,0,0.25);
 }
 
-.owner-btn:hover {
-  background: linear-gradient(135deg, #084fb6, #0a6ce0);
-}
-
-.owner-icon {
-  font-size: 18px;
+/* keep same blue gradient */
+.header {
+  position: relative;
 }
