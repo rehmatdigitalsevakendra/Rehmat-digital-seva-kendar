@@ -518,3 +518,37 @@ body{
 .voice-text{
   font-weight:500;
 }
+.owner-box {
+  margin: 15px auto;
+  max-width: 320px;
+  text-align: center;
+}
+
+.owner-box a {
+  text-decoration: none;
+}
+
+.owner-box-content {
+  background: #000;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.owner-box-content h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.owner-box-content p {
+  margin: 6px 0 0;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.owner-box-content:hover {
+  background: #111;
+  transform: scale(1.03);
+}
