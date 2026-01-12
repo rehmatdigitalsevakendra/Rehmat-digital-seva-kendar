@@ -521,16 +521,16 @@ body{
 /* ===== Owner Box Top Right ===== */
 .owner-box {
   position: absolute;
-  top: 22px;
-  right: 12px;
-  width: 115px;
-  height: 45px;
+  top: 20px;
+  right: 10px;
+  width: 112px;
+  height: 43px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  border-radius: 30px;
-  font-weight: 600;
+  gap: 5px;
+  border-radius: 25px;
+  font-weight: 550;
 }
 
 /* keep same blue gradient */
