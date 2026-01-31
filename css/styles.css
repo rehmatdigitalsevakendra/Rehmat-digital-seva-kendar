@@ -37,6 +37,12 @@ body{
   width: 100%;
   z-index: 999;
   background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: #ffffff;
 }
 .header-brand{display:flex;align-items:center;gap:12px}
 .logo{width:64px;height:64px;border-radius:14px;overflow:hidden;background:white;display:flex;align-items:center;justify-content:center;padding:6px;box-shadow:0 8px 20px rgba(11,23,34,0.05)}
