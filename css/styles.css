@@ -20,7 +20,7 @@ body{
   font-family: Inter, system-ui, -apple-system, Roboto, "Helvetica Neue", Arial;
   margin:0;color:#081426;background:linear-gradient(180deg,var(--bg),#ffffff);
   -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-  padding-top:55px;
+  padding-top:50px;
 }
 
 /* page transition */
@@ -37,7 +37,6 @@ body{
   width: 100%;
   z-index: 999;
   background: #ffffff;
-  };
 }
 .header-brand{display:flex;align-items:center;gap:12px}
 .logo{width:64px;height:64px;border-radius:14px;overflow:hidden;background:white;display:flex;align-items:center;justify-content:center;padding:6px;box-shadow:0 8px 20px rgba(11,23,34,0.05)}
