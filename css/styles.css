@@ -20,6 +20,7 @@ body{
   font-family: Inter, system-ui, -apple-system, Roboto, "Helvetica Neue", Arial;
   margin:0;color:#081426;background:linear-gradient(180deg,var(--bg),#ffffff);
   -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  padding-top:80px;
 }
 
 /* page transition */
@@ -29,7 +30,14 @@ body{
 /* header */
 .header{
   display:flex;align-items:center;gap:12px;padding:14px 18px;background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(250,250,255,0.9));
-  border-bottom:1px solid rgba(11,23,34,0.04);position:sticky;top:0;z-index:999;
+  border-bottom:1px solid rgba(11,23,34,0.04);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: #ffffff;
+  };
 }
 .header-brand{display:flex;align-items:center;gap:12px}
 .logo{width:64px;height:64px;border-radius:14px;overflow:hidden;background:white;display:flex;align-items:center;justify-content:center;padding:6px;box-shadow:0 8px 20px rgba(11,23,34,0.05)}
