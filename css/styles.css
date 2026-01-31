@@ -20,7 +20,6 @@ body{
   font-family: Inter, system-ui, -apple-system, Roboto, "Helvetica Neue", Arial;
   margin:0;color:#081426;background:linear-gradient(180deg,var(--bg),#ffffff);
   -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-  padding-top:100px;
 }
 
 /* page transition */
@@ -30,19 +29,7 @@ body{
 /* header */
 .header{
   display:flex;align-items:center;gap:12px;padding:14px 18px;background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(250,250,255,0.9));
-  border-bottom:1px solid rgba(11,23,34,0.04);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  background: #ffffff;
-
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 18px;
-  background: #ffffff;
+  border-bottom:1px solid rgba(11,23,34,0.04);position:sticky;top:0;z-index:90;
 }
 .header-brand{display:flex;align-items:center;gap:12px}
 .logo{width:64px;height:64px;border-radius:14px;overflow:hidden;background:white;display:flex;align-items:center;justify-content:center;padding:6px;box-shadow:0 8px 20px rgba(11,23,34,0.05)}
@@ -301,252 +288,91 @@ body{
 .date {
   font-size: 12px;
   color: #666;
-}
-/* Call & WhatsApp buttons */
-.contact-cta {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin: 20px 0;
-  flex-wrap: wrap;
-}
-
-.contact-cta a {
-  padding: 14px 22px;
-  border-radius: 30px;
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #fff;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-}
-
-.call-btn {
-  background: #007bff;
-}
-
-.call-btn:hover {
-  background: #0056b3;
-}
-
-.whatsapp-btn {
-  background: #25D366;
-}
-
-.whatsapp-btn:hover {
-  background: #1ebe5d;
-}
-/* Force style for Call & WhatsApp buttons */
-.contact-cta {
-  display: flex !important;
-  gap: 14px;
-  justify-content: center;
-  margin: 22px 0;
-}
-
-.contact-cta a {
-  display: inline-flex !important;
-  align-items: center;
-  gap: 8px;
-  padding: 14px 22px;
-  border-radius: 30px;
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration: none !important;
-  color: #fff !important;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
-}
-
-/* Call */
-.call-btn {
-  background-color: #007bff !important;
-}
-
-/* WhatsApp */
-.whatsapp-btn {
-  background-color: #25D366 !important;
-}
-/* ===== Featured Services Cards ===== */
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 14px;
-  margin-top: 12px;
-}
-
-.service-card {
+  }
+  .header {
   background: #ffffff;
-  border-radius: 14px;
-  padding: 16px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 15px;
 }
 
-.service-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+.header-brand {
+  display: flex;
+  align-items: center;   /* vertical center */
+  gap: 12px;             /* space between logo & text */
 }
 
-/* Service title (with emoji icon) */
-.service-title {
-  font-size: 17px;
+.site-logo {
+  width: 60px;           /* adjust if needed */
+  height: auto;
+}
+
+.site-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-title {
+  font-size: 20px;
   font-weight: 700;
-  margin-bottom: 4px;
+  color: #0a3d91;
 }
 
-/* Service description */
-.service-desc {
+.header-sub {
   font-size: 14px;
-  color: #555;
+  color: #666;
 }
+/* ===== HEADER ALIGNMENT FIX ===== */
 
-/* Price section */
-.service-price {
-  margin-top: 8px;
-}
-
-/* Price badge */
-.price-badge {
-  display: inline-block;
-  background: #e7f0ff;
-  color: #0a58ca;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 6px 12px;
-  border-radius: 999px;
-}
-/* ===== Service Popup (FIX) ===== */
-.service-popup {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: none;              /* VERY IMPORTANT */
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-.popup-box {
-  background: #ffffff;
-  padding: 22px;
-  border-radius: 16px;
-  width: 90%;
-  max-width: 320px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-}
-
-.popup-box h3 {
-  margin-bottom: 16px;
-}
-
-.popup-btn {
-  display: block;
-  margin: 10px 0;
-  padding: 14px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.popup-btn.call {
-  background: #007bff;
-}
-
-.popup-btn.whatsapp {
-  background: #25D366;
-}
-
-.popup-btn.cancel {
-  background: #dc3545;
-  border: none;
-  cursor: pointer;
-}
-/* ===== Service Popup Overlay ===== */
-.service-popup {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-.popup-box {
-  background: #fff;
-  width: 90%;
-  max-width: 320px;
-  padding: 20px;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-.popup-box h3 {
-  margin-bottom: 16px;
-}
-
-.popup-btn {
-  display: block;
-  margin: 10px 0;
-  padding: 12px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.popup-btn.call {
-  background: #0d6efd;
-  color: #fff;
-}
-
-.popup-btn.whatsapp {
-  background: #25d366;
-  color: #fff;
-}
-
-.popup-btn.cancel {
-  background: #eee;
-  border: none;
-  width: 100%;
-  cursor: pointer;
-}
-.voice-btn{
-  margin-top:6px;
-  background:#0a58ca;
-  color:#fff;
-  border:none;
-  border-radius:20px;
-  padding:6px 12px;
-  font-size:14px;
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  cursor:pointer;
-}
-
-.voice-text{
-  font-weight:500;
-}
-/* ===== Owner Box Top Right ===== */
-.owner-box {
-  position: absolute;
-  top: 20px;
-  right: 10px;
-  width: 112px;
-  height: 43px;
+.header-brand {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 5px;
-  border-radius: 25px;
-  font-weight: 550;
+  gap: 12px;
 }
 
-/* keep same blue gradient */
-.header {
-  position: relative;
+.site-logo {
+  width: 60px;
+  height: auto;
 }
+
+.site-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0a3d91;
+}
+
+.header-sub {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Telecom Logos Row */
+.telecom-logos {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 15px 0 25px 0;
+}
+
+.telecom-logos img {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  padding: 6px;
+  transition: transform 0.25s ease;
+}
+
+.telecom-logos img:hover {
+  transform: scale(1.1);
+}
+
+/* Push nav buttons down slightly */
+.grid-nav {
+  margin-top: 10px;
+  }
