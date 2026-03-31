@@ -1,123 +1,318 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+/* ===== PROFESSIONAL CLEAN CSS (FINAL) ===== */
 
-body{
-  margin:0;
-  font-family:'Inter', sans-serif;
-  background:linear-gradient(135deg,#eef2ff,#f8fafc);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+:root{
+  --bg:#f4f7fb;
+  --card:#ffffff;
+  --primary:#0a3d91;
+  --secondary:#1e88e5;
+  --text:#081426;
+  --muted:#6b7280;
+  --shadow:0 10px 30px rgba(0,0,0,0.08);
+  --radius:14px;
 }
 
-/* HEADER */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* ===== HEADER ===== */
+
 .header{
+  background:#fff;
+  padding:14px 16px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.05);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.header-brand{
   display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px;
-  background:rgba(255,255,255,0.8);
-  backdrop-filter:blur(10px);
-  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+  flex-direction:column;
 }
 
 .header-left{
   display:flex;
-  gap:12px;
   align-items:center;
+  gap:12px;
 }
 
 .site-logo{
-  width:55px;
+  width:60px;
+  height:60px;
   border-radius:12px;
+  background:#fff;
+  padding:4px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
 }
 
-.header h1{
+.site-title{
   font-size:18px;
-  margin:0;
+  font-weight:800;
+  color:var(--primary);
 }
 
-.header p{
+.header-sub{
   font-size:13px;
-  margin:0;
-  color:gray;
+  color:var(--muted);
 }
 
 /* OWNER BUTTON */
 .owner-box{
-  background:linear-gradient(135deg,#2563eb,#1e3a8a);
-  color:white;
-  padding:8px 14px;
-  border-radius:20px;
-  text-decoration:none;
-  font-size:14px;
-}
-
-/* NAV */
-.nav-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-  margin:20px;
-}
-
-.nav-card{
-  background:white;
-  padding:15px;
-  border-radius:14px;
-  text-align:center;
+  margin-top:10px;
+  padding:10px 18px;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+  border-radius:30px;
   font-weight:600;
-  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.15);
   transition:0.3s;
 }
 
-.nav-card:hover{
+.owner-box:hover{
+  transform:translateY(-2px);
+}
+
+/* ===== CONTAINER ===== */
+
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:16px;
+}
+
+/* ===== NAV BUTTONS ===== */
+
+.grid-nav{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+  margin-bottom:15px;
+}
+
+.nav-circle{
+  background:linear-gradient(135deg,var(--secondary),var(--primary));
+  color:#fff;
+  border-radius:14px;
+  padding:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:var(--shadow);
+  transition:0.25s;
+}
+
+.nav-circle:hover{
+  transform:scale(1.04);
+}
+
+.nav-icon{
+  font-size:18px;
+}
+
+/* ===== LATEST UPDATES ===== */
+
+.latest-updates{
+  background:#fff;
+  padding:16px;
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  margin-bottom:20px;
+}
+
+.latest-updates h2{
+  font-size:18px;
+  border-bottom:2px solid #000;
+  padding-bottom:6px;
+  margin-bottom:15px;
+}
+
+.update-card{
+  border-bottom:1px solid #ddd;
+  padding:12px 0;
+}
+
+.update-card:last-child{
+  border:none;
+}
+
+.update-card a{
+  text-decoration:none;
+  color:#000;
+}
+
+.update-title{
+  font-size:15px;
+  margin-bottom:8px;
+}
+
+.update-meta{
+  display:flex;
+  gap:10px;
+}
+
+.tag{
+  font-size:12px;
+  padding:4px 8px;
+  border-radius:4px;
+  color:#fff;
+}
+
+.tag.punjab{background:#000}
+.tag.all-india{background:#444}
+
+.date{
+  font-size:12px;
+  color:#666;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+  background:#fff;
+  padding:20px;
+  border-radius:14px;
+  box-shadow:var(--shadow);
+}
+
+.hero h1{
+  margin:0;
+  font-size:22px;
+  color:var(--primary);
+}
+
+.hero p{
+  color:var(--muted);
+}
+
+/* ===== SERVICES ===== */
+
+.services-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+  margin-top:15px;
+}
+
+.service-card{
+  background:#fff;
+  padding:18px;
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  transition:0.3s;
+}
+
+.service-card:hover{
   transform:translateY(-5px);
 }
 
-/* HERO */
-.hero{
-  margin:20px;
-  padding:20px;
-  background:linear-gradient(135deg,#2563eb,#1e40af);
-  color:white;
-  border-radius:16px;
-  text-align:center;
+.service-title{
+  font-size:16px;
+  font-weight:700;
 }
 
-/* SERVICES */
-.services{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-  padding:20px;
+.service-desc{
+  font-size:13px;
+  color:var(--muted);
 }
 
-.service{
-  background:white;
-  padding:15px;
+.service-price{
+  margin-top:10px;
+  font-size:18px;
+  font-weight:bold;
+  color:var(--secondary);
+}
+
+/* ===== BUTTON ===== */
+
+.apply-btn{
+  display:inline-block;
+  margin-top:8px;
+  padding:8px 18px;
+  background:linear-gradient(135deg,var(--secondary),var(--primary));
+  color:#fff;
+  text-decoration:none;
+  border-radius:22px;
+}
+
+/* ===== FOOTER ===== */
+
+.bottom-bar{
+  margin-top:20px;
+  background:#fff;
+  padding:16px;
   border-radius:14px;
-  text-align:center;
-  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+  box-shadow:var(--shadow);
+}
+
+.socials a{
+  display:inline-block;
+  padding:8px 12px;
+  background:#f5f5f5;
+  border-radius:10px;
+  text-decoration:none;
+  color:var(--primary);
   font-weight:600;
 }
 
-/* WHATSAPP */
-.fab{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  padding:15px;
-  border-radius:50%;
-  font-size:20px;
+.location-row{
+  margin-top:10px;
+}
+
+.btn-loc{
+  display:inline-block;
+  padding:10px 12px;
+  background:linear-gradient(135deg,var(--secondary),var(--primary));
+  color:#fff;
+  border-radius:10px;
   text-decoration:none;
 }
 
-/* RESPONSIVE */
+/* ===== WHATSAPP BUTTON ===== */
+
+.fab{
+  position:fixed;
+  right:16px;
+  bottom:20px;
+  background:linear-gradient(135deg,#25D366,#128C7E);
+  color:#fff;
+  padding:14px 18px;
+  border-radius:30px;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ===== FOOTER TEXT ===== */
+
+.footer-note{
+  text-align:center;
+  margin-top:20px;
+  color:#666;
+  font-size:13px;
+}
+
+/* ===== RESPONSIVE ===== */
+
 @media(min-width:700px){
-  .nav-grid{
+  .grid-nav{
     grid-template-columns:repeat(4,1fr);
   }
 
-  .services{
+  .services-grid{
     grid-template-columns:repeat(3,1fr);
   }
 }
