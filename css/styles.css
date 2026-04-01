@@ -426,3 +426,9 @@ margin-top: 10px;
   font-size: 14px;
   border-radius: 20px;
 }
+/* Header alignment final fix */
+.header-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
