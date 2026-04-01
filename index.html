@@ -283,30 +283,39 @@ function speakWelcome() {
   speech.rate = 0.9;
   window.speechSynthesis.speak(speech);
 }
-  // ===== LOAD MORE BUTTON FUNCTION =====
+
+  // ===== STEP LOAD MORE BUTTON =====
 document.addEventListener("DOMContentLoaded", function () {
 
+  const items = document.querySelectorAll(".update-item");
   const loadBtn = document.getElementById("loadMoreBtn");
 
-  if (loadBtn) {
-    loadBtn.addEventListener("click", function () {
+  let visible = 2; // how many show first
 
-      const items = document.querySelectorAll(".update-item");
+  // hide all first
+  items.forEach(item => item.style.display = "none");
 
-items.forEach((item, index) => {
-  if (index >= 2) {
-    item.style.display = "block";
-  }
-});
+  // show first 2
+  function showItems() {
+    for (let i = 0; i < visible; i++) {
+      if (items[i]) {
+        items[i].style.display = "block";
+      }
+    }
 
-      hiddenItems.forEach(item => {
-        item.style.display = "block";
-      });
-
-      // hide button after click
+    // hide button if all shown
+    if (visible >= items.length) {
       loadBtn.style.display = "none";
-    });
+    }
   }
+
+  showItems();
+
+  // button click
+  loadBtn.addEventListener("click", function () {
+    visible += 2; // load 2 more
+    showItems();
+  });
 
 });
 </script>
