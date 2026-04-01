@@ -376,4 +376,35 @@ transform: scale(1.1);
 .grid-nav {
 margin-top: 10px;
 }
-It's my css make it more professional I mean design
+
+
+
+  /* ===== LOAD MORE FUNCTIONALITY (CLEAN ADDON) ===== */
+
+/* Hide updates after first 2 */
+.update-item:nth-child(n+3) {
+  display: none;
+}
+
+/* More button (matching your theme) */
+#loadMoreBtn {
+  display: block;
+  width: fit-content;
+  margin: 15px auto;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(180deg, #0b66c2, #083f7a);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+}
+
+/* Hover effect (subtle, professional) */
+#loadMoreBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
