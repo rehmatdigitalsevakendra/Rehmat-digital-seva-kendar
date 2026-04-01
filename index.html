@@ -291,7 +291,13 @@ document.addEventListener("DOMContentLoaded", function () {
   if (loadBtn) {
     loadBtn.addEventListener("click", function () {
 
-      const hiddenItems = document.querySelectorAll(".update-item:nth-child(n+3)");
+      const items = document.querySelectorAll(".update-item");
+
+items.forEach((item, index) => {
+  if (index >= 2) {
+    item.style.display = "block";
+  }
+});
 
       hiddenItems.forEach(item => {
         item.style.display = "block";
