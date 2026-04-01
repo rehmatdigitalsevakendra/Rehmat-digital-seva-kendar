@@ -377,15 +377,6 @@ transform: scale(1.1);
 margin-top: 10px;
 }
 
-
-
-  /* ===== LOAD MORE FUNCTIONALITY (CLEAN ADDON) ===== */
-
-/* Hide updates after first 2 */
-.update-item:nth-child(n+3) {
-  display: none;
-}
-
 /* More button (matching your theme) */
 #loadMoreBtn {
   display: block;
