@@ -399,3 +399,30 @@ margin-top: 10px;
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
+/* ===== HEADER NEW PROFESSIONAL LAYOUT ===== */
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pushes owner to right */
+}
+
+.header-brand > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* text block */
+.header-brand > div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* owner button right side */
+.owner-box {
+  margin-left: auto;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 20px;
+}
