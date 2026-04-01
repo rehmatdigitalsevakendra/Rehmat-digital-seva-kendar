@@ -273,8 +273,16 @@ function setLang(l){
   document.getElementById('latestNotice').querySelector('.title').textContent = texts[l].notice;
   document.getElementById('noticeCTA').textContent = texts[l].applyBtn;
 }
-langBtn.addEventListener('click', ()=> setLang(lang==='en'?'hi':'en'));
-document.getElementById('langJump').addEventListener('click', (e)=>{ e.preventDefault(); setLang(lang==='en'?'hi':'en'); });
+if (langBtn) {
+  langBtn.addEventListener('click', ()=> setLang(lang==='en'?'hi':'en'));
+}
+const langJump = document.getElementById('langJump');
+if (langJump) {
+  langJump.addEventListener('click', (e)=>{
+    e.preventDefault();
+    setLang(lang==='en'?'hi':'en');
+  });
+}
 function speakWelcome() {
   const speech = new SpeechSynthesisUtterance(
     "Welcome to Rehmat Digital Seva Kendra"
