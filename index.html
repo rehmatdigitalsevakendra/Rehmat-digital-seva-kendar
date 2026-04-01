@@ -283,6 +283,26 @@ function speakWelcome() {
   speech.rate = 0.9;
   window.speechSynthesis.speak(speech);
 }
+  // ===== LOAD MORE BUTTON FUNCTION =====
+document.addEventListener("DOMContentLoaded", function () {
+
+  const loadBtn = document.getElementById("loadMoreBtn");
+
+  if (loadBtn) {
+    loadBtn.addEventListener("click", function () {
+
+      const hiddenItems = document.querySelectorAll(".update-item:nth-child(n+3)");
+
+      hiddenItems.forEach(item => {
+        item.style.display = "block";
+      });
+
+      // hide button after click
+      loadBtn.style.display = "none";
+    });
+  }
+
+});
 </script>
 </body>
         </html>
